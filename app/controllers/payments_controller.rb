@@ -24,8 +24,6 @@ class PaymentsController < ApplicationController
 
   private
 
-  # Just an example of using strong params. Not really necessary since there is
-  # only one
   def payment_params
     params.permit(:payment_amount, :loan_id)
   end
