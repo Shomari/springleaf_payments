@@ -1,6 +1,7 @@
 class Payment < ActiveRecord::Base
   belongs_to :loan
 
+  validates :payment_amount, :loan, presence: true
   validate :check_loan_balance, on: :create
 
   def check_loan_balance
